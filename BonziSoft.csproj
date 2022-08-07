@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <PublishSingleFile>True</PublishSingleFile>
+    <SelfContained>False</SelfContained>
+    <PublishReadyToRun>True</PublishReadyToRun>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Remove="Icon.ico" />
+    <Content Remove="Icon.bmp" />
+    <Content Remove="shader.frag" />
+    <Content Remove="shader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+    <EmbeddedResource Include="shader.frag" />
+    <EmbeddedResource Include="shader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="Silk.NET" Version="2.16.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+  </ItemGroup>
+</Project>
